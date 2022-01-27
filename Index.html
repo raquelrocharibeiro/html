@@ -8,14 +8,12 @@
   <body>
     <h3>Seja bem vindo!</h3>
     <h3>1 Visualizar reação do atributo accept!</h3>
-    <!-- accepet -->
     <form action="/action_page.php">
     <input type="file" name="pic" accept="image/*">
     <input type="submit">
     </form>
 
     <h3>2 Visualizar reação do atributo accept-charset</h3>
-    <!--accept-charset -->
     
     <form action="/action_page.php" accept-charset="ISO-8859-1">
     First name: <input type="text" name="fname"><br>
@@ -27,7 +25,6 @@
     <a href="https://www.w3schools.com/css/" accesskey="c">CSS</a>
 
     <h3>4 Visualizar reação do atributo action</h3>
-    <!-- action-->
     <form action="/index.html" method="get">
     First name: <input type="text" name="fname"><br>
     Last name: <input type="text" name="lname"><br>
@@ -36,16 +33,29 @@
     
     <h3>Script Example</h3>
     
-    <!-- Script  Example -->
     <script src="demo_async.js" async></script
     
     <h3>atributo autocomplete</h3>
     
-    <!-- autocomplete Example -->
+    
     <form action="/action_page.php" method="get" autocomplete="on">
   First name:<input type="text" name="fname"><br>
   E-mail: <input type="email" name="email"><br>
   <input type="submit">
 </form>
+    
+      <h3>atributo autoplay para o elemento audio</h3>
+      
+      <audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+      <h3>atributo autoplay para o elemento video</h3>
+      <video controls autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
   </body>
   </html>
