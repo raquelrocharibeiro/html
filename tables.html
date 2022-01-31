@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learning Tables HTML
+    </title>
+	<style>
+    	#border-tables1 table, #border-tables1 th, #border-tables1 td{
+				border: 1px solid black;
+		}
+		#border-tables1 table{			
+				  font-family: arial, sans-serif;
+				  width: 30%;
+			}
+		#border-tables2 table, #border-tables2 th, #border-tables2 td {
+		  border: 1px solid black;
+		  border-collapse: collapse;
+		}
+		#border-tables2 table{			
+				  font-family: arial, sans-serif;
+				  width: 30%;
+			}		
+		
+		#border-tables3 table, #border-tables3 th, #border-tables3 td {
+			  border: 1px solid white;
+			  border-collapse: collapse;
+			}
+		#border-tables3 table{			
+				  font-family: arial, sans-serif;
+				  width: 30%;
+			}
+		
+		#border-tables3 th, #border-tables3 td {
+			  background-color: #96D4D4;
+			}
+		
+		#border-tables4 table, #border-tables4 th, #border-tables4 td {
+		  border: 1px solid black;
+		  border-radius: 10px;
+		}		
+        #border-tables4 table{			
+				  font-family: arial, sans-serif;
+				  width: 30%;
+			}
+		#border-tables5 th, #border-tables5 td {
+			border: 1px solid black;
+			border-radius: 10px;
+		}
+		#border-tables5 table{			
+				  font-family: arial, sans-serif;
+				  width: 30%;
+			}
+			
+
+		#border-tables6 th, #border-tables6 td {
+		  border-style: dotted;}		  
+		#border-tables7 td{
+				  border-style: dashed     }
+		#border-tables8 td {
+				  border-style: solid     }
+		#border-tables15 td,  {
+				  border-style: double     }
+		#border-tables9 td {
+				  border-style: groove     }
+		#border-tables10 td {
+				  border-style: ridge     }
+		#border-tables11 th, #border-tables6 td {
+				  border-style: inset     }
+		#border-tables12 th, #border-tables6 td {
+				  border-style: outset     }
+		#border-tables13 th, #border-tables6 td {
+				  border-style: none     }
+		#border-tables14 th, #border-tables6 td {
+				  border-style: hidden     
+				}
+		
+		#geral tfoot{
+			  color: blue;
+			 }
+		#geral thead{
+			  color: red;
+			}
+			
+		#geral table{			
+				  font-family: arial, sans-serif;
+				  border-collapse: collapse;
+				  width: 100%;
+			}
+		#geral th,#geral td{
+				  border: 1px solid #dddddd;
+				  text-align: left;
+				  padding: 8px;
+				}
+		
+
+	</style>
+  </head>
+  <body>
+    <div id="geral">
+	<a href="index.html">Home</a>
+		 
+    <h1>Learning HTML</h1>
+    
+	<h2>Welcome! Let's go Learning Tables HTML.</h3>
+
+	<p>There are 10 elements to tables groups </p>
+ 	<p>Attributes - 7 Attributes to tables tags</p>
+     
+	<h3>18-HTML Tables</h3>
+		
+	<h2>Learning Tables</h2>
+	<p>
+
+	<table>
+		<caption>HTML Element Tables</caption>
+		<tr>
+			<th>Tag</th>	
+			<th>Description</th>
+			<th>attributes</th>
+			<th>attributes defines</th>
+		</tr>
+		<tr>
+			<td>table</td>	
+			<td colspan=3>Defines a table</td>	
+		</tr>	
+		<tr>
+			<td>caption</td>	
+			<td  colspan=3>Defines a table caption</td>	
+		</tr>	
+		<tr>
+			<td>th</td>	
+			<td>Defines a header cell in a table</td>	
+			<td><ul><li>rowspan</li><li>scope</li></ul></td>
+			<td><ul><li>Specifies the number of rows a table cell should span</li><li>escrever scope</li></ul></td>
+		</tr>	
+		<tr>
+			<td>tr</td>	
+			<td colspan=3>Defines a row in a table</td>	
+		</tr>	
+		<tr>
+			<td>td</td>	
+			<td>Defines a cell in a table</td>	
+			<td>rowspan</td>
+			<td>Specifies the number of rows a table cell should span</td>
+		</tr>	
+		<tr>
+			<td>thead</td>	
+			<td colspan=3>Groups the header content in a table</td>	
+		</tr>	
+		<tr>
+			<td>tbody</td>	
+			<td  colspan=3>Groups the body content in a table</td>	
+		</tr>	
+		<tr>
+			<td>tfoot</td>	
+			<td colspan=3>Groups the footer content in a table</td>	
+		</tr>	
+		<tr>
+			<td>col</td>	
+			<td  colspan=3>Specifies column properties for each column within a colgroup element</td>	
+		</tr>			
+		<tr>
+			<td>colgroup</td>	
+			<td colspan=3>Specifies a group of one or more columns in a table for formatting</td>	
+		</tr>	
+	</table>
+	</p>
+	<h3>Learning Attributes</h3>
+	<p>
+	<table style="border-style: groove;">
+	    <caption>Attributes they use in elements of the tables group</caption>
+		<tr><td> Attribute</td><td>	Belongs to</td><td>	Description</td></tr>
+		<tr><td> colspan</td><td>td, th</td><td>Specifies the number of columns a table cell should span</td></tr>
+		<tr><td>headers</td><td>td, th</td><td>	Specifies one or more headers cells a cell is related to</td></tr>
+		<tr><td>rowspan</td><td>td, th</td><td>	Specifies the number of rows a table cell should span</td></tr>
+		<tr><td>scope</td><td>	th</td><td>	Specifies whether a header cell is a header for a column, row, or group of columns or rows</td></tr>
+		<tr><td>headers</td><td>td, th</td><td>to give the same name to one more element</td></tr>
+		<tr><td>id</td><td>Global Attributes</td><td>to give the element a unique name - Global Attributes</td></tr>	
+		<tr><td>span</td><td>col, colgroup</td><td> Specifies the number of columns to effect. Element: col, colgroup</td></tr>	
+    </table> 
+	</p>
+	<h2>Example rowspan, colspan, scope attribute</h2>
+	<p>
+	<table style="border-style: groove;">
+	    <caption>Learning Tables. This is a caption tag</caption>
+		<tr>
+            <th scope="col">This is a th cell that has a scope attribute with value=col</th>
+            <th>The scope attribute has no visual effect in ordinary web browsers, but can be used by screen readers.</th>
+			<th></th>
+        </tr>
+		<tr><td>this is a cell</td><td>this is a td tag</td><td>th and td tag is inside of the tr tag</td></tr>
+		<tr><td>Example attribute colspan =></td><td colspan="2">this cell has a colspan attribute with value = 2, merges 2 columns </td></tr>
+		<tr><td>Example attribute rowspan=></td><td rowspan="2">this cell has a rowspan attribute with value = 2</td><td>	merges 2 lines</td></tr>
+	</table> 
+	</p>
+	<h2>Example headers attribute</h2>
+	<p>the example below shows the headers attribute, used to identify the cell, 
+	    and you can put the same name to more than one tag. For content first name, first name, last name, 
+		for example the tag would be identified by name</p>
+	<p>
+	<table style="border-style: groove;">
+	    <caption>Learning headers,id attributes</caption>
+		<tr><td></td><td></td></tr>
+		<tr><th id="name" colspan="3">here have id attribute with name. Example Content: Name</th></tr>
+		<tr><th headers="name">here has headers attribute with value name. Example Contente: FirstName</th><th headers="name">here has headers attribute with value name.Example Content: Lastname </th></tr>		
+		<tr><td colspan="2" style="text-align: center;">see the example below </td></tr>
+		<tr><th id="name"  style="text-align: center;" colspan="3">Name</th></tr>
+		<tr><th headers="name">FirstName</th><th headers="name">Lastname </th></tr>		
+    </table> 
+	</p>
+	<h2>thead, tbody, tfoot,colgroup </h2>
+	<h3>the example below shows an HTML table with a thead, tbody, and a tfoot element</h3>	
+	<p>I put a style red color for thead and blue color for tfoot element</p>	
+	<h3>span attribute</h3>
+	<p>span attribute: Specifies the number of columns to effect. Element: col, colgroup</p>	
+	<p>col, colgroup element should be used before thead</p>
+    <p>
+	<table>
+	  <caption>Learning thead,tbody,tfoot,colgroup</caption>
+	  <colgroup>
+		<col span="1" style="background-color:tomato">
+		<col style="background-color:lightgrey">
+	  </colgroup>
+	  <thead>
+	    <tr><th colspan="2">below thead example</th></tr>
+		<tr>
+		  <th>Month</th>
+		  <th>Savings</th>
+		</tr>
+	  </thead>
+	  <tbody>
+		<tr><th colspan="2">below tbody example</th></tr>
+		<tr>
+		  <td>January</td>
+		  <td>€100</td>
+		</tr>
+		<tr>
+		  <td>February</td>
+		  <td>€80</td>
+		</tr>
+	  </tbody>
+	  <tfoot>
+		<tr><th colspan="2">below tfoot example</th></tr>		
+		<tr>
+		  <td>Sum</td>
+		  <td>€180</td>
+		</tr>
+	  </tfoot>
+	</table>
+	</div>
+
+	<h3>Example Borders Tables</h3>
+	<p>set the CSS: table, th, td{border: 1px solid black;}</p>							
+	<p>set the CSS border-collapse property to collapse to avoid having double borders</p>
+	
+	<div id="border-tables1">
+    <table>
+	    <caption>Learning borders - without property collapse</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td colspan="2">Linha 2</td></tr>
+		<tr><td headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+    
+	<h3>Example 2 - Borders Tables with collapse </h3>
+	<p>set the CSS: border: 1px solid black; to table,th,td</p>
+	<p>set the CSS: border-collapse: collapse;to table,th,td</p>
+		  
+	<div id="border-tables2">
+    <table>
+	    <caption>Learning borders - with property collapse</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td colspan="2">Linha 2</td></tr>
+		<tr><td headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	
+	<h3>Examples 3 - Borders Tables with collors </h3>
+	<p>set the CSS: border-collapse=collapse;border: 1px solid white; for table, th, td </p>
+	<p>set the CSS: background-color: #96D4D4; </p>
+	
+	<div id="border-tables3">
+    <table>
+	    <caption>Learning borders - with property collapse</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td colspan="2">Linha 2</td></tr>
+		<tr><td headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	
+	<h3>Examples 4 - With the border-radius property, the borders get rounded corners</h3>
+	<p>set the CSS: table, th, td {border: 1px solid black;  border-radius: 10px;}</p>
+	
+	<div id="border-tables4">
+    <table>
+	    <caption>Learning borders - With the border-radius property, the borders get rounded corners</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td colspan="2">Linha 2</td></tr>
+		<tr><td headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+    
+	<h3>Examples 5 - Skip the border around the table by leaving out table from the css selector</h3>
+	<p>set the CSS: th, td {border: 1px solid black; border-radius: 10px;}</p>
+	
+	<div id="border-tables5">
+    <table>
+	    <caption>Learning borders - With the border-radius property, the borders get rounded corners</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td colspan="2">Linha 2</td></tr>
+		<tr><td headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+
+	<h3>Examples 6 - borders Style</h3>
+	<p>set the CSS: th, td {border: 1px solid black; border-radius: 10px;}</p>
+	
+	<div id="border-tables">
+    <table>
+	    <caption>Learning borders - With the border-radius property, the borders get rounded corners</caption>
+		<tr><td id="border-tables6">Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td id="border-tables7" colspan="2">Linha 2</td></tr>
+		<tr><td id="border-tables8" headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+
+	<p>
+		<a href="index.html">Home</a>
+	</p>	
+  </body>
+</html>
