@@ -5,7 +5,10 @@
       Learning Tables HTML
     </title>
 	<style>
-    	#border-tables1 table, #border-tables1 th, #border-tables1 td{
+	    #table-size table, #table-size th, #table-size td{		
+            border: 1px solid black;border-collapse: collapse;"
+		}	
+		#border-tables1 table, #border-tables1 th, #border-tables1 td{
 				border: 1px solid black;
 		}
 		#border-tables1 table{			
@@ -51,27 +54,30 @@
 				  width: 30%;
 			}
 			
-
-		#border-tables6 th, #border-tables6 td {
-		  border-style: dotted;}		  
+        
+		#border-tables6 table,  #border-tables6 td {		  
+		  font-family: arial, sans-serif;
+		  width: 30%;
+		  border-style: dotted;
+		}		  
 		#border-tables7 td{
-				  border-style: dashed     }
+				  border-style: dashed;     }
 		#border-tables8 td {
-				  border-style: solid     }
+				  border-style: solid;     }
 		#border-tables15 td,  {
-				  border-style: double     }
+				  border-style: double;     }
 		#border-tables9 td {
-				  border-style: groove     }
+				  border-style: groove;     }
 		#border-tables10 td {
 				  border-style: ridge     }
-		#border-tables11 th, #border-tables6 td {
-				  border-style: inset     }
-		#border-tables12 th, #border-tables6 td {
-				  border-style: outset     }
-		#border-tables13 th, #border-tables6 td {
-				  border-style: none     }
-		#border-tables14 th, #border-tables6 td {
-				  border-style: hidden     
+		#border-tables11 th, #border-tables11 td {
+				  border-style: inset;     }
+		#border-tables12 th, #border-tables12 td {
+				  border-style: outset;     }
+		#border-tables13 th, #border-tables13 td {
+				  border-style: none;     }
+		#border-tables14 th, #border-tables14 td {
+				  border-style: hidden;
 				}
 		
 		#geral tfoot{
@@ -315,14 +321,95 @@
 	<h3>Examples 6 - borders Style</h3>
 	<p>set the CSS: th, td {border: 1px solid black; border-radius: 10px;}</p>
 	
-	<div id="border-tables">
+	<div id="border-tables6">
     <table>
-	    <caption>Learning borders - With the border-radius property, the borders get rounded corners</caption>
-		<tr><td id="border-tables6">Linha 1</td><td>Coluna 2</td></tr>
-		<tr><td id="border-tables7" colspan="2">Linha 2</td></tr>
-		<tr><td id="border-tables8" headers="name">Linha 3</td><td headers="name">Linha 3-Coluna 2</td></tr>			
+	    <caption>Learning borders - With the border-style: dotted;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
     </table> 
 	</div>
+    <h3>Examples 7 - borders Style</h3>
+	<div id="border-tables7">
+    <table>
+	    <caption>Learning borders - With the border-style: dashed;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	<h3>Examples 8 - borders Style</h3>
+    <div id="border-tables8">
+    <table>
+	    <caption>Learning borders - With the border-style: solid;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	<h3>Examples 9 - borders Style</h3>
+    <div id="border-tables9">
+    <table>
+	    <caption>Learning borders - With the border-style: groove;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+    <h3>Examples 10 - borders Style</h3>
+    <div id="border-tables10">
+    <table>
+	    <caption>Learning borders - With the border-style: ridge;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	<h3>Examples 11 - borders Style</h3>
+    <div id="border-tables11">
+    <table>
+	    <caption>Learning borders - With the border-style: inset;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	<h3>Examples 12 - borders Style</h3>
+    <div id="border-tables12">
+    <table>
+	    <caption>Learning borders - With the border-style: outset;</caption>
+		<tr><td>Linha 1</td><td>Coluna 2</td></tr>
+		<tr><td>Linha 2</td><td>Linha 2-Coluna 2</td></tr>			
+		<tr><td>Linha 3</td><td>Linha 3-Coluna 2</td></tr>			
+    </table> 
+	</div>
+	<h2>Table Sizes</h2>
+	<p>Use the style attribute with the width or height properties to specify the size of a table, row or column.</p>
+	<p>Using a percentage as the size unit for a width means how wide will this element be compared to its parent element, 
+	   which in this case is the body element.</p>
+	<div id="table-size">
+	<table style="width:100%;">
+	  <caption>Table with width 100%</caption>
+	  <tr>
+		<th style="width:70%">cell com width de 70%</th>
+		<th>xxx</th>
+		<th>xxx</th>
+	  </tr>
+	  <tr style="height:200px">
+		<td>The line with height 200 pixels</td>
+		<td>xxx</td>
+		<td>xxx</td>
+	  </tr>
+	  <tr>
+		<td>xxx</td>
+		<td>xxx</td>
+		<td>xxx</td>
+	  </tr>
+	</table>
+	</div>
+    <h2>HTML Table Headers</h2>
+
+    
 
 	<p>
 		<a href="index.html">Home</a>
