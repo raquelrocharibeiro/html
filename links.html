@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learning HTML
+    </title>
+	<style>
+		a:link {
+		  color: green;
+		  <!--  background-color: transparent;-->
+		  text-decoration: none;
+		}
+		a:visited {
+		  color: blue;
+		  <!--  background-color: transparent;-->
+		  text-decoration: none;
+		}
+		a:hover {
+		  color: red;
+		  <!--
+		  background-color: transparent;
+		  -->
+		  text-decoration: underline;
+		}
+		a:active {
+		  color: yellow;
+		<!--  
+		background-color: transparent;
+		-->
+		  text-decoration: underline;
+		}
+		a:hover, a:active {
+		background-color: red;
+		}
+	</style>
+
+  </head>
+  <body>
+    <p>
+		<a href="index.html">Home</a>
+	</p>
+
+   <h3>Welcome! Links.</h3>
+   
+   <h3>bookmark</h3>
+   <p>so that readers can jump to specific parts of a web page<br>
+   if case a web page is very long.</p>
+   <p>1º use the id attribute to create a bookmark</p>
+   <h2 id="C4">&lt;h2 id="C4"&gt;</h2>
+   <a href="#C4">Jump to Chapter 4</a>
+   <p>add a link to a bookmark on another page</p>
+   <a href="index.html#link">Index Html - Link. Example: &lt;a href="index.html#link"&gt;</a>
+   
+	<h2>Link Button</h2>
+	<p>A link styled as a button:</p>
+	<a href="index.html" target="_blank">This is a link</a>
+
+	<h3>target</h3>
+	<p>The target attribute specifies where to open the linked document.<br>
+	   The target attribute can have one of the following values:<br>
+
+		_self - Default. Opens the document in the same window/tab as it was clicked<br>
+		_blank - Opens the document in a new window or tab<br>
+		_parent - Opens the document in the parent frame<br>
+		_top - Opens the document in the full body of the window<br>
+   
+    </p>
+	<p>Use target="_blank" to open the linked document in a new browser window or tab:</p>
+    <p>&lt;a href="https://www.w3schools.com/" target="_blank"&gt;Visit W3Schools!&lt;/a&gt </p>
+	<h3>absolute URL and Relative URLs</h3> 
+	<p>Both examples above are using an absolute URL (a full web address) in the href attribute.<br>
+	A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part)
+	</p>
+	
+	<p>
+	Absolute URL : a full web address<br>
+	Relative URLs: without the "https://www"<br>
+	</p>
+	<p>
+		<a href="index.html">Home</a>
+	</p>	
+  </body>
+</html>
