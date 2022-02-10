@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Estudo de HTML
+    </title>
+  </head>
+  <body>
+    <h3>Seja bem vindo!</h3>
+    <h3>1 Visualizar reação do atributo accept!</h3>
+    <form action="/action_page.php">
+    <input type="file" name="pic" accept="image/*">
+    <input type="submit">
+    </form>
+
+    <h3>2 Visualizar reação do atributo accept-charset</h3>
+    
+    <form action="/action_page.php" accept-charset="ISO-8859-1">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="Submit">
+    </form>
+    
+    <h3>3 Exemplo do atributo accesskey</h3>    
+    <a href="https://www.w3schools.com/css/" accesskey="c">CSS</a>
+
+    <h3>4 Visualizar reação do atributo action</h3>
+    <form action="/index.html" method="get">
+    First name: <input type="text" name="fname"><br>
+    Last name: <input type="text" name="lname"><br>
+    <input type="submit" value="Fazer Login">
+    </form>
+    
+    <h3>Script Example</h3>
+    
+    <script src="demo_async.js" async></script
+    
+    <h3>atributo autocomplete</h3>
+    
+    
+    <form action="/action_page.php" method="get" autocomplete="on">
+  First name:<input type="text" name="fname"><br>
+  E-mail: <input type="email" name="email"><br>
+  <input type="submit">
+</form>
+    
+      <h3>atributo autoplay para o elemento audio</h3>
+      
+      <audio controls autoplay>
+  <source src="horse.ogg" type="audio/ogg">
+  <source src="horse.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+      <h3>atributo autoplay para o elemento video</h3>
+      <video controls autoplay>
+  <source src="movie.mp4" type="video/mp4">
+  <source src="movie.ogg" type="video/ogg">
+  Your browser does not support the video tag.
+</video>
+      <h3>atributo cite para o elemento blocquote</h3>
+      
+      <blockquote cite="http://www.worldwildlife.org/who/index.html">
+For 50 years, WWF has been protecting the future of nature. The world's leading conservation organization, WWF works in 100 countries and is supported by 1.2 million members in the United States and close to 5 million globally. WWF's unique way of working combines global reach with a foundation in science, involves action at every level from local to global, and ensures the delivery of innovative solutions that meet the needs of both people and nature.
+</blockquote>
+  </body>
+  </html>
