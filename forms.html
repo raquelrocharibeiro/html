@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>
-      Learning HTML
+      Learning Forms HTML
     </title>
 	<style>
 		table, th, td {
@@ -12,6 +12,14 @@
 		table{			
 			font-family: arial, sans-serif;
 			
+		}	
+		.note {
+		  font-size: 120%;
+		  color: red;
+		}		
+		.verde {
+		  font-size: 110%;
+		  color: green;
 		}		
 
 	</style>
@@ -26,15 +34,15 @@
 		The &lt;form&gt; element is a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.
 	</p>
 	<p>
-	The &lt;label&gt; tag defines a label for many form elements.
-	The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together.	
+	The <span class="note">&lt;label&gt;</span> tag defines a label for many form elements.
+	The <span class="note">for</span> attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together.	
 	</p>
 	<p>
 	The &lt;input type="radio"&gt; defines a radio button.
 	allows a user to select one from a limited number of options.
 	</p>
 	<p>
-	Each input field must have a name attribute to be sent, otherwise the input field value will not be sent.
+	Each input field must have a <span class="note">name attribute</span> to be sent, otherwise the input field value will not be sent.
 	</p>
 	<h3>Elements Form</h3>
 	<table>
@@ -56,8 +64,8 @@
 		</tr>
 		<tr><th>&lt;select&gt;</th><td>drop-down list.<br>
 				&lt;option&gt; elements define an option that can be selected.<br>
-				By default, the first item in the drop-down list is selected, to change the default add the selected attribute to the option<br>
-				size attribute specify the number of visible values.
+				By default, the first item in the drop-down list is selected, to change the default add the <span class="note">selected</span> attribute to the option<br>
+				<span class="note">size</span> attribute specify the number of visible values.
 			</td><td></td>
 			</tr>
 		<tr><th>&lt;textarea&gt;</th><td></td><td></td></tr>
@@ -69,7 +77,35 @@
 		<tr><th>&lt;option&gt;</th><td></td><td></td></tr>
 		<tr><th>&lt;optgroup&gt;</th><td></td><td></td></tr>
 	</table>
-	<h3>Example of the input type and label</h3>
+
+	<h3>Attributes Form</h3>
+	<table>
+	    <colgroup>
+			<col span="1" style="background-color:tomato">
+			<col  span="2" style="background-color:lightgrey">
+		</colgroup>
+		<thead>
+			<tr>
+			<th>Attributes of the Form Element</th>
+			<th>Note</th>
+			<th>Check</th>
+			</tr>
+		</thead>
+		<tr><th>size</th><td>for define number of visible values in the select option element</td><td>OK</td></tr>
+		<tr><th>for</th><td>atributo do elemento label deve ser igual ao atributo id da tag &lt;input &gt;. Uni o elemento input ao elemento label.</td><td>OK</td></tr>
+		<tr><th>name</th><td>Specifies the name of the element</td><td>OK</td></tr>
+		<tr><th>id</th><td>Specifies a unique id for an element</td><td>OK</td></tr>
+		<tr><th>value</th><td>Specifies the value of the element</td><td>OK</td></tr>
+		<tr><th>type</th><td>Used in the input element of the form to define the input type</td><td>OK</td></tr>
+		<tr><th>action</th><td>form, file where data will be sent when clicking submit button</td><td>OK</td></tr>
+		<tr><th>target</th><td>where the response is displayed, in the new or current window, new tab, parent frame, full body</td><td>OK</td></tr>
+		<tr><th>method</th><td>get or post</td><td>OK</td></tr>
+		<tr><th>Autocomplete</th><td>autocomplete on or off</td><td>OK</td></tr>
+		<tr><th>Novalidate</th><td></td><td>OK</td></tr>
+		
+	</table>
+
+	<h3 id="type">Example of the input type and label</h3>
 	<form>
 		<label for="fname">a single-line text input field.Example:input type="text"</label><br>
 		<input type="text">	</input><br><br>
@@ -163,7 +199,7 @@
 	<br>
 	<h2>Example of the select option</h2>
 	<p>use code html:</p>
-	<p>size="3" is for define number of visible values.</p>
+	<p id="size">size="3" is for define number of visible values.</p>
 	<p style="color:red">
 	&lt;form&gt;<br>
 		&lt;label for="cars">Choose a car:&lt;/label&gt;<br>
@@ -184,7 +220,116 @@
 		  <option value="audi">Audi</option>
 		</select>
 	</form>
+	<h2 id="action">Example of the Action Attribute</h2>
+	<p>form, file where data will be sent when clicking submit button<br>
+	 If the action attribute is omitted, the action is set to the current page.</p>
+	<p> In the example below, On submit, send form data to "action_page.php</p>
+
+	<h2 id="target">Example of the target Attribute</h2>
+	<p>specifies where to display the response that is received after submitting the form.<br>
+	The response is displayed in a new window or tab, in the current window, in a named iframe, in the full body of the window<br>
+	The default value is _self.
+	</p>	
 	
+	<dl>
+	  <dt>_blank</dt>
+	  <dd>The response is displayed in a new window or tab</dd>
+	  <dt>_self</dt>
+	  <dd>The response is displayed in the current window</dd>	  
+	  <dt>_parent</dt>
+	  <dd>The response is displayed in the parent frame</dd>
+	  <dt>_top</dt>
+	  <dd>The response is displayed in the full body of the window<br>framename	The response is displayed in a named iframe</dd>
+	</dl>
+	<p>use code html:</p>
+	<p style="color:red">
+	&lt;form  action="/action_page.php" <span class="verde"> target="_blank"&gt;</span><br>
+	  &lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+	  &lt;label for="lname">Last name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+	  &lt;input type="submit" value="Submit"&gt;<br>
+	&lt;/form&gt;
+	</p>
+
+	<p>
+
+	<form action="/action_page.php" target="_blank" >
+	  <label for="fname">First name:</label><br>
+	  <input type="text" id="fname" name="fname" value="John"><br>
+	  <label for="lname">Last name:</label><br>
+	  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+	  <input type="submit" value="Submit">
+	</form>
+ 	</p>
+   <h2 id="action">Example of the method Attribute</h2>
+   <p>	
+	The method attribute specifies the HTTP method to be used when submitting the form data, can be sent as <span class="note">get or post</span>, default is get
+   </p>
+   </p>
+   <span class="note">Notes on GET:</span><br>
+	Appends the form data to the URL, the submitted form data is visible in the URL<br>
+	The length of a URL is limited (2048 characters)<br>
+	GET is good for non-secure data, like query strings in Google<br><br>
+
+	<span class="note">Notes on POST:</span><br>
+
+	Appends the form data inside the body of the HTTP request (the submitted form data is not shown in the URL)<br>
+	POST has no size limitations, and can be used to send large amounts of data.<br>
+	Form submissions with POST cannot be bookmarked<br>
+	Tip: Always use POST if the form data contains sensitive or personal information!<br>
+   </p>
+   <p>use code html:</p>
+	<p style="color:red">
+	&lt;form  action="/action_page.php" target="_blank" <span class="verde"> method="post" &gt; </span><br>
+	  &lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+	  &lt;label for="lname">Last name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+	  &lt;input type="submit" value="Submit"&gt;<br>
+	&lt;/form&gt;
+	</p>
+
+	<p>
+
+	<form action="/action_page.php" target="_blank" method="post" >
+	  <label for="fname">First name:</label><br>
+	  <input type="text" id="fname" name="fname" value="John"><br>
+	  <label for="lname">Last name:</label><br>
+	  <input type="text" id="lname" name="lname" value="Doe"><br><br>
+	  <input type="submit" value="Submit">
+	</form>
+ 	</p>
+	
+	<h2>Example of the autocomplete attribute</h2>
+    	
+	The autocomplete attribute specifies whether a form should have autocomplete on or off.<br>
+	When autocomplete is on, the browser automatically complete values based on values that the user has entered before.<br>
+	<p>use code html:</p>
+	<p style="color:red">
+	&lt;form action="/action_page.php" target="_blank" method="post" <span class="verde"> autocomplete="on" &gt; </span><br>
+	  &lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+	  &lt;label for="lname">Last name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+	  &lt;input type="submit" value="Submit"&gt;<br>
+	&lt;/form&gt;
+	</p>
+
+	<h2>Example of the Novalidate attribute</h2>
+    The novalidate attribute is a boolean attribute, if informed the form data (input) should not be validated when sent.
+	<p>use code html:</p>
+	<p style="color:red">
+	&lt;form action="/action_page.php" target="_blank" method="post" <span class="verde"> novalidate &gt; </span><br>
+	  &lt;label for="fname">First name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+	  &lt;label for="lname">Last name:&lt;/label&gt;&lt;br&gt;<br>
+	  &lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+	  &lt;input type="submit" value="Submit"&gt;<br>
+	&lt;/form&gt;
+	</p>
+    <p><span class="verde">this informed the form data (input) not be validated when sent.
+
 	<p>
 		<a href="index.html">Home</a>
 	</p>	
