@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learning Images HTML
+    </title>
+	<style>
+	  .vermelho {
+		  font-size: 105%;
+		  color: red;
+		}		
+		.verde {
+		  font-size: 105%;
+		  color: green;
+		}		
+
+	</style>
+  </head>
+  <body>
+    <p>
+		<a href="index.html">Home</a>
+	</p>
+
+    <h2>Welcome! Let´s go Images.</h3>
+	<p>The &lt;img&gt; tag creates a holding space for the referenced image.<br>
+	   The &lt;img&gt; tag is empty, it contains attributes only, and does not have a closing tag.<br>
+    </p>
+	<dl>
+		<dt>
+			The &lt;img&gt; tag has two required attributes:
+		</dt>
+		<dd>src - Specifies the path to the image</dd>
+		<dd>alt - Specifies an alternate text for the image</dd>
+		<dd>usemap - to use areas clickable in the image</dd>
+		<dd>float - Use the CSS float property to let the image float to the right or to the left of a text</dd>
+	</dl>
+	<br>
+	<p>This code is:
+	<p style="color:green">
+    &lt;img src="fofa.jpeg" alt="Snapchat" style="width:200px;height:400px;"&gt;<br>
+	&lt;img src="cat.jpeg" alt="The cat" width="500" height="600"&gt;<br>	
+	</p>	
+	<br>
+	Another website
+	<p style="color:green">
+	&lt;img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com"&gt;<br>	
+	</p>	
+		
+	<br>
+	Another Folder
+	<p style="color:green">
+	&lt;img src="images/laura.jpeg" alt="Laura Isabelle" style="width:20%;height:20%"&gt; <br>	
+	</p>	
+	With link
+	<p style="color:green">
+	&lt;a href="https://www.youtube.com/watch?v=-EVdqFEaqG4" target="_blank" &gt;<br>
+		&lt;img src="smiley.gif" alt="HTML tutorial" style="width:102px;height:102px;"&gt;<br>
+	&lt;/a&gt;
+	</p>	
+	
+	<div>
+	<img src="fofa.jpeg" alt="Laura and Mother at the Snapchat" style="width:200px;height:400px;"><br>
+	<img src="cat.jpeg" alt="The cat" width="200" height="400"><br>
+	</div>
+	<img src="images/laura.jpeg" alt="Laura Isabelle" style="width:20%;height:20%"><br>	
+	
+	<a href="https://www.youtube.com/watch?v=-EVdqFEaqG4" target="_blank">
+	  <img src="images/laura e mother.jpeg" alt="Laura Youtube" style="width:102px;height:102px;">
+	</a>
+	
+	<p><img src="images/laura.jpeg" alt="Laura" style="float:left;width:72px;height:92px;">
+		The image will float to the left of the text.</p>
+	
+	<br>
+	<br>
+	<h2>Create Image Map </h2>
+	<p>The HTML &lt;map&gt; tag defines an image map that is an image with clickable areas. The areas are defined with one or more &lt;area&gt; tags.</p>
+	<p>The usemap value starts with a hash tag # followed by the name of the image map,<br>
+    	and is used to create a relationship between the image and the image map.</p>
+	<p style="color:green">
+		&lt;img src="workplace.jpg" alt="Workplace" <u>usemap="#workmap"</u>&gt;<br><br>
+
+		&lt;map <u>name="workmap"</u>&gt;<br>
+		  &lt;area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm"&gt;<br>
+		  &lt;area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm"&gt;<br>
+		  &lt;area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm"&gt;<br>
+		&lt;/map&gt;<br>
+    </p> 
+	<h3>Shape</h3>
+	<p> You must define the shape of the clickable area, and you can choose one of these values:
+	</p> 
+	
+	<ul>	
+		<li>rect - defines a rectangular region</li>
+		<li>circle - defines a circular region</li>
+		<li>poly - defines a polygonal region</li>
+		<li>default - defines the entire region</li>
+	</ul>
+	You must also define some coordinates to be able to place the clickable area onto the image. 
+	<br>
+	<a href="https://www.w3schools.com/html/html_images_imagemap.asp" target="_blank" style="font-size:2">See more Image Maps</a>
+
+	<br>
+	<br>
+	<h2>background</h2>
+	This Code:<br>
+	
+	<p class="verde">
+		&lt;p <span class="vermelho"> style="background-image: url('fofa.jpeg');</span>"&gt; <br>
+		Laura's beautiful, she's smart, she's very sweet.&lt;br&gt; <br>
+		A wonderful, charming girl. &lt;br&gt; <br>
+		Very polite and creative. <br>
+		&lt;/p&gt; <br>
+		<br>
+	</p>
+	Example:
+	<p style="background-image: url('fofa.jpeg');">
+	Laura's beautiful, she's smart, she's very sweet.<br>
+	A wonderful, charming girl. <br>
+	Very polite and creative.
+	</p> 
+	<br>
+	<h3>background-image on style of the head</h3>
+	<p class="verde">
+	&lt;style&gt;<br>
+		p {<br>
+		  background-image: url('img_girl.jpg');<br>
+		}<br>
+	&lt;/style&gt;<br>
+	</p>
+	<h3>background-image on a Page</h3>
+	<p class="verde">
+		&lt;style&gt;<br>
+		body {<br>
+		  background-image: url('img_girl.jpg');<br>
+		}<br>
+		&lt;/style&gt;
+	<br>
+
+	<h3>background-repeat on a Page</h3>
+	<p class="verde">
+		&lt;style&gt;<br>
+		body {<br>
+		  background-image: url('example_img_girl.jpg');<br>
+		  background-repeat: no-repeat;	<br>
+		}<br>
+		&lt;/style&gt;
+	</p>
+
+	
+	<br>
+	<h3>background-cover</h3>
+	<dl>
+	<dt>background-attachment to fixed</dt>
+	<dd>to make sure the entire element is always covered, </dd>
+	<dt>background-size property to cover</dt>
+	<dd>for the background image cover the entire element</dd>
+	<dt>background-size property to 100% 100%</dt>
+	<dd>for the background image to stretch to fit the entire element</dd>
+	</dl>
+	
+	<p class="verde">
+		&lt;style&gt;<br>
+		body {<br>
+		  background-image: url('img_girl.jpg');<br>
+		  background-repeat: no-repeat;<br>
+		  background-attachment: fixed;<br>
+		  background-size: cover;<br>
+		}<br>
+		&lt;/style&gt;
+	</p>
+	<a href="https://www.w3schools.com/html/html_images_background.asp" target="_blank">To see more background-image</a>
+	
+	<br><br>
+	<h2>Picture</h2>
+	<p class="vermelho">1. Bandwidth<p>
+	<p>If you have a small screen or device, it is not necessary to load a large image file. <br>
+	The browser will use the first &lt;source&gt; element with matching attribute values, and ignore any of the following elements.</p>
+
+	<p class="vermelho">2. Format Support<p>
+	<p>Some browsers or devices may not support all image formats. By using the &lt;picture&gt; element, <br>
+	you can add images of all formats, and the browser will use the first format it recognizes, and ignore any of the following elements.</p>
+
+	<p class="verde">	
+	&lt; picture &gt;<br>
+	  &lt;source srcset="img_avatar.png"&gt;<br>
+	  &lt;source srcset="img_girl.jpg"&gt;<br>
+	  &lt;img src="img_beatles.gif" alt="Beatles" style="width:auto;"&gt;<br>
+	&lt;/picture&gt;<br>
+	</p>	
+	
+	<a href="https://www.w3schools.com/html/html_images_picture.asp" target="_blank">To see more picture element</a>
+	<br><br><p>
+		<a href="index.html">Home</a>
+	</p>	
+  </body>
+</html>
