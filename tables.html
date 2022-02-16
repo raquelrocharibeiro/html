@@ -5,6 +5,26 @@
       Learning Tables HTML
     </title>
 	<style>
+	    .table2, .table2 th, .table2 td {
+		  border:1px solid #282A35;
+		}
+		body.darkpagetheme .table2,body.darkpagetheme .table2 th,body.darkpagetheme .table2 td {
+		  border:1px solid #ddd;
+		}
+		.table2 td {
+		  padding: 10px;
+		}
+		.table3, .table3 th, .table3 td {
+		  border:1px solid #282A35;
+		}
+		.table3 {
+		  border-spacing:15px;
+		}
+		.table2 {
+		  float:left;
+		  margin-left:15%;
+		  margin-right:15%;
+		}
 	    #table-size table, #table-size th, #table-size td{		
             border: 1px solid black;border-collapse: collapse;"
 		}	
@@ -98,6 +118,15 @@
 				  padding: 8px;
 				}
 		
+		.note {
+		  font-size: 120%;
+		  color: red;
+		}		
+		.verde {
+		  font-size: 110%;
+		  color: green;
+		}		
+
 
 	</style>
   </head>
@@ -408,9 +437,170 @@
 	</table>
 	</div>
     <h2>HTML Table Headers</h2>
+	<p>Table headers are defined with <span class="note">th</span> elements, each th element represents a table cell.<br>
+		<span class="note">Vertical Table Headers:</span> To use the first column as table headers, define the first cell in each row as a th element<br>
+		You can add a <span class="note">caption</span> that serves as a heading for the entire table.
+	</p>
+	<p class="verde">
+	&lt;table&gt;<br>
+	  &lt;caption&gt;Names List&lt;/caption&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;th&gt;Firstname&lt;/th&gt;<br>
+		&lt;th&gt;Lastname&lt;/th&gt;<br>
+		&lt;th&gt;Age&lt;/th&gt;<br>
+	  &lt;/tr&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;td&gt;Jill&lt;/td&gt;<br>
+		&lt;td&gt;Smith&lt;/td&gt;<br>
+		&lt;td&gt;50&lt;/td&gt;<br>
+	  &lt;/tr&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;td&gt;Eve&lt;/td&gt;<br>
+		&lt;td&gt;Jackson&lt;/td&gt;<br>
+		&lt;td&gt;94&lt;/td&gt;<br>
+	  &lt;/tr&gt;<br>
+	&lt;/table&gt;<br>
+    &lt;/p&gt;<br>
+	&lt;table&gt;<br>
+	  &lt;caption&gt;Names List&lt;/caption&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;th&gt;Firstname&lt;/th&gt;<br>
+		&lt;th&gt;Lastname&lt;/th&gt;<br>
+		&lt;th&gt;Age&lt;/th&gt;<br>
+	  &lt;/tr&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;td&gt;Jill&lt;/td&gt;<br>
+		&lt;td&gt;Smith&lt;/td&gt;<br>
+		&lt;td&gt;50&lt;/td&gt;<br>
+	  &lt;/tr&gt;<br>
+	  &lt;tr&gt;<br>
+		&lt;td&gt;Eve&lt;/td&gt;<br>
+		&lt;td&gt;Jackson&lt;/td&gt;<br>
+		&lt;td&gt;94&lt;/td&gt;<br>
+	  &lt;/tr&gt;<br>
+	&lt;/table&gt;<br>
 
-    
+	<h3>Align Table Headers</h3>
+	Example
+	<p class="verde">
+	th {<br>
+	  text-align: left;<br>
+	}<br>
+	</p>
+    <p><span class="note">Cell padding</span> is the space between the cell edges and the cell content. Default=0<br>
+    <span class="note">Cell spacing</span> is the space between each cell. Default=2 pixels.<br>
 
+	<p class="verde">
+		th, td {<br>
+		padding: 15px;<br>
+		}<br>
+		<br>
+		
+		
+	 th, td {<br>
+	  padding-top: 10px;<br>
+	  padding-bottom: 20px;<br>
+	  padding-left: 30px;<br>
+	  padding-right: 40px;<br>
+	}<br>
+	<br>
+	table {<br>
+	  border-spacing: 30px;<br>
+	}<br>
+   <br>
+   <div id="tableborders" style="overflow:auto;">
+		<table class="table2">
+		<caption>With Padding</caption>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		</table>
+		<table class="table3">
+		<caption>With Spacing</caption>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		<tr>
+		<td>hello</td>
+		<td>hello</td>
+		<td>hello</td>
+		</tr>
+		</table>
+		</div>
+	
+	</p>
+	<span class="note">colspan:</span> to make a cell span over multiple columns<br>
+	<span class="note"> rowspan</span>To make a cell span over multiple rows<br>
+	Example:<span class="verde">  &lt;th rowspan="2"&gt;Phone&lt;/th&gt;</span> 
+	
+	<table class="border-tables3">
+	  <tr>
+		<th>Name</th>
+		<td>Jill</td>
+	  </tr>
+	  <tr>
+		<th rowspan="2">Phone</th>
+		<td>555-1234</td>
+	  </tr>
+	  <tr>
+		<td>555-8745</td>
+	</tr>
+	</table>
+	<h2>Table Zebra Stripes</h2>
+	<span class="note">nth-child(even):</span> To style every other table row element<br>
+	<span class="note">hover</span> selector on tr to highlight table rows on mouse over<br>
+    Use an <span class="note">rgba()</span> color to specify the transparency of the color<br>
+	<p class="verde">	
+	.table1, .table1 th, .table1 td, .table2, .table2 th, .table2 td, .table3, .table3 th, .table3 td  {<br>
+	  border:1px solid #282A35;<br>
+	  border:1px solid #fff;  <br>
+	  border-collapse: collapse;<br>
+	  font-size:12px<br>
+	}<br>
+    <br><br>
+	.table2 tr:nth-child(even) {<br>
+	  background-color: rgba(150, 212, 212,0.4);<br>
+	}<br>
+    <br><br>
+	.table1 td:nth-of-type(even){<br>
+	  background-color: rgba(150, 212, 212,0.4);<br>
+	}<br>
+	<br>
+	tr:hover {background-color: #D6EEEE;}
+    </p>
+	
+    <h2>Hide Columns</h2>
+	<p> <span class="note">visibility property: </span> hide specific columns</p>
+    <p class="verde">	
+	
+	&lt;colgroup&gt;<br>
+		&lt;col span="2"&gt;<br>
+		&lt;col span="3" style="visibility: collapse"&gt;<br>
+	  &lt;/colgroup&gt;<br>
+	</p>	
+	
+	<a href="https://www.w3schools.com/html/html_table_styling.asp" target="_blank">to see more</a><br>
+	<br>
+	<br>
 	<p>
 		<a href="index.html">Home</a>
 	</p>	
