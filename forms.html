@@ -57,24 +57,24 @@
 			<th>Check</th>
 			</tr>
 		</thead>
-		<tr><th>&lt;input&gt;</th><td>this element can be displayed in several ways, depending on the type attribute.</td><td></td></tr>
+		<tr><th>&lt;input&gt;</th><td>this element can be displayed in several ways, depending on the type attribute.</td><td>OK</td></tr>
 		<tr><th>&lt;label&gt;</th><td>defines a label for several form elements.<br>
 		        The for attribute of the &lt;label&gt; tag should be equal to the id attribute of the &lt;input&gt; element to bind them together.</td>
-			<td></td>
+			<td>OK</td>
 		</tr>
 		<tr><th>&lt;select&gt;</th><td>drop-down list.<br>
 				&lt;option&gt; elements define an option that can be selected.<br>
 				By default, the first item in the drop-down list is selected, to change the default add the <span class="note">selected</span> attribute to the option<br>
 				<span class="note">size</span> attribute specify the number of visible values.
-			</td><td></td>
+			</td><td>OK</td>
 			</tr>
-		<tr><th>&lt;textarea&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;button&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;fieldset&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;legend&gt;</th><td></td><td></td></tr>
+		<tr><th>&lt;textarea&gt;</th><td> element defines a multi-line input field (a text area)</td><td>OK</td></tr>
+		<tr><th>&lt;button&gt;</th><td> element defines a clickable button</td><td>OK</td></tr>
+		<tr><th>&lt;fieldset&gt;</th><td>element is used to group related data in a form.</td><td>OK</td></tr>
+		<tr><th>&lt;legend&gt;</th><td>element defines a caption for the fieldset element.</td><td>OK</td></tr>
 		<tr><th>&lt;datalist&gt;</th><td></td><td></td></tr>
 		<tr><th>&lt;output&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;option&gt;</th><td></td><td></td></tr>
+		<tr><th>&lt;option&gt;</th><td></td><td>OK</td></tr>
 		<tr><th>&lt;optgroup&gt;</th><td></td><td></td></tr>
 	</table>
 
@@ -113,14 +113,16 @@
 		<tr><th>required</th><td></td><td></td></tr>
 		<tr><th>step</th><td></td><td></td></tr>
 		<tr><th>autofocus</th><td></td><td></td></tr>
-		<tr><th>height</th><td></td><td></td></tr>
-		<tr><th>width</th><td></td><td></td></tr>
+		<tr><th>height</th><td></td><td>OK</td></tr>
+		<tr><th>width</th><td></td><td>OK</td></tr>
 		<tr><th>list</th><td></td><td></td></tr>
 		<tr><th>form</th><td>input element</td><td></td></tr>
 		<tr><th>formaction</th><td></td><td></td></tr>
 		<tr><th>formmethod </th><td></td><td></td></tr>
 		<tr><th>formtarget </th><td></td><td></td></tr>
 		<tr><th>formnovalidate </th><td></td><td></td></tr>
+		<tr><th>rows</th><td>specifies the visible number of lines in a text area</td><td>OK</td></tr>
+		<tr><th>cols </th><td>specifies the visible width of a text area</td><td>OK</td></tr>
 		
 	</table>
 
@@ -374,7 +376,63 @@
 	&lt;/form&gt;
 	</p>
     <p><span class="verde">this informed the form data (input) not be validated when sent.
-
+    <h2>textarea Element</h2>
+	<span class="note">rows attribute</span> specifies the visible number of lines in a text area.<br>
+    <span class="note">cols attribute</span> specifies the visible width of a text area.<br><br>
+	<form>
+		<textarea name="message" rows="10" cols="30">
+			The cat was playing in the garden.
+		</textarea>
+	</form>
+	<p class="verde">
+	&lt;form&gt;<br>
+		&lt;textarea name="message" rows="10" cols="30"&gt;<br>
+			The cat was playing in the garden.<br>
+		&lt;/textarea&gt;<br>
+	&lt;/form&gt;<br>
+	</p>
+	<h2>button Element</h2>
+	<span class="note">type </span>Always specify the type attribute for the button element. <br>    
+	Different browsers may use different default types for the button element. <br> <br>    
+	
+	<form>
+		<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+	</form>
+	
+	<p class="verde">
+	&lt;form&gt;<br>
+		&lt;button type="button" onclick="alert('Hello World!')"&gt;Click Me!&lt;/button&gt;<br>		
+	&lt;/form&gt;<br>
+	</p>
+	<h2>fieldset and legend</h2>
+	<span class="note">fieldset</span> element is used to group related data in a form.<br>
+	<span class="note">legend</span> element defines a caption for the fieldset element.<br>
+	
+	<form action="/action_page.php">
+	  <fieldset>
+		<legend>Personalia:</legend>
+		<label for="fname">First name:</label><br>
+		<input type="text" id="fname" name="fname" value="John"><br>
+		<label for="lname">Last name:</label><br>
+		<input type="text" id="lname" name="lname" value="Doe"><br><br>
+		<input type="submit" value="Submit">
+	  </fieldset>
+	</form>
+	<p>Example Code:</p>
+	<p class="verde">
+	&lt;form action="/action_page.php"&gt;<br>
+	  &lt;fieldset&gt;<br>
+		&lt;legend&gt;Personalia:&lt;/legend&gt;<br>
+		&lt;label for="fname"&gt;First name:&lt;/label&gt;&lt;br&gt;<br>
+		&lt;input type="text" id="fname" name="fname" value="John"&gt;&lt;br&gt;<br>
+		&lt;label for="lname"&gt;Last name:&lt;/label&gt;&lt;br&gt;<br>
+		&lt;input type="text" id="lname" name="lname" value="Doe"&gt;&lt;br&gt;&lt;br&gt;<br>
+		&lt;input type="submit" value="Submit"&gt;<br>
+	  &lt;/fieldset&gt;<br>
+	&lt;/form&gt;<br>
+	
+	</p>
+	
 	<p>
 		<a href="index.html">Home</a>
 	</p>	
