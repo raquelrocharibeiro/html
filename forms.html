@@ -14,7 +14,7 @@
 			
 		}	
 		.note {
-		  font-size: 120%;
+		  font-size: 110%;
 		  color: red;
 		}		
 		.verde {
@@ -72,10 +72,10 @@
 		<tr><th>&lt;button&gt;</th><td> element defines a clickable button</td><td>OK</td></tr>
 		<tr><th>&lt;fieldset&gt;</th><td>element is used to group related data in a form.</td><td>OK</td></tr>
 		<tr><th>&lt;legend&gt;</th><td>element defines a caption for the fieldset element.</td><td>OK</td></tr>
-		<tr><th>&lt;datalist&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;output&gt;</th><td></td><td></td></tr>
-		<tr><th>&lt;option&gt;</th><td></td><td>OK</td></tr>
-		<tr><th>&lt;optgroup&gt;</th><td></td><td></td></tr>
+		<tr><th>&lt;datalist&gt;</th><td>this is a combobox</td><td>OK</td></tr>
+		<tr><th>&lt;output&gt;</th><td>represents the result of a calculation </td><td>OK</td></tr>
+		<tr><th>&lt;option&gt;</th><td>use in the select and the datalist</td><td>OK</td></tr>
+		<tr><th>&lt;optgroup&gt;</th><td>Defines a group of related options in a drop-down list</td><td>OK</td></tr>
 	</table>
 
 	<h3>Attributes Form</h3>
@@ -102,12 +102,12 @@
 		<tr><th>method</th><td>get or post</td><td>OK</td></tr>
 		<tr><th>Autocomplete</th><td>autocomplete on or off</td><td>OK</td></tr>
 		<tr><th>Novalidate</th><td>no validated data form when sent</td><td>OK</td></tr>
-		<tr><th>readonly</th><td></td><td></td></tr>		
-		<tr><th>disabled</th><td></td><td></td></tr>
-		<tr><th>maxlength </th><td></td><td></td></tr>
-		<tr><th>max</th><td></td><td></td></tr>
-		<tr><th>min</th><td></td><td></td></tr>
-		<tr><th>multiple</th><td></td><td></td></tr>
+		<tr><th>readonly</th><td>Specifies that the element is read-only, input and textarea element</td><td>OK</td></tr>		
+		<tr><th>disabled</th><td> it specifies that the element should be disabled.</td><td>OK</td></tr>
+		<tr><th>maxlength </th><td>specifies the maximum number of characters allowed in the element</td><td>OK</td></tr>
+		<tr><th>max</th><td></td><td>OK</td></tr>
+		<tr><th>min</th><td></td><td>OK</td></tr>
+		<tr><th>multiple</th><td>it specifies that the user is allowed to enter/select more than one value.</td><td>OK</td></tr>
 		<tr><th>pattern</th><td></td><td></td></tr>
 		<tr><th>placeholder</th><td></td><td></td></tr>
 		<tr><th>required</th><td></td><td></td></tr>
@@ -267,6 +267,44 @@
 		  <option value="audi">Audi</option>
 		</select>
 	</form>
+	<br>
+	<p>here you can select more options because is using the <span class="note">multiple</span> attribute</p>
+	<p>Example: &lt;select multiple&gt;</p>
+	<select multiple>
+	  <option value="volvo">Volvo</option>
+	  <option value="saab">Saab</option>
+	  <option value="opel">Opel</option>
+	  <option value="audi">Audi</option>
+	</select>
+	<h2>optgroup</h2>
+	<p>Defines a group inside the select element</p>
+	<label for="cars">Choose a car:</label>
+	<select  name="cars" id="cars">
+	  <optgroup label="Swedish Cars">
+		<option value="volvo">Volvo</option>
+		<option value="saab">Saab</option>
+	  </optgroup>
+	  <optgroup label="German Cars">
+		<option value="mercedes">Mercedes</option>
+		<option value="audi">Audi</option>
+	  </optgroup>
+	</select>
+	<br>
+    <p class="verde">
+	&lt;label for="cars"&gt;Choose a car:&lt;/label&gt;<br>
+	&lt;select  name="cars" id="cars"&gt;<br>
+	  &lt;optgroup label="Swedish Cars"&gt;<br>
+		&lt;option value="volvo"&gt;Volvo&lt;/option&gt;<br>
+		&lt;option value="saab"&gt;Saab&lt;/option&gt;<br>
+	  &lt;/optgroup&gt;<br>
+	  &lt;optgroup label="German Cars"&gt;<br>
+		&lt;option value="mercedes"&gt;Mercedes&lt;/option&gt;<br>
+		&lt;option value="audi"&gt;Audi&lt;/option&gt;<br>
+	  &lt;/optgroup&gt;<br>
+	&lt;/select&gt;<br>
+	</p>
+	<br>
+
 	<h2 id="action">Example of the Action Attribute</h2>
 	<p>form, file where data will be sent when clicking submit button<br>
 	 If the action attribute is omitted, the action is set to the current page.</p>
@@ -378,17 +416,40 @@
     <p><span class="verde">this informed the form data (input) not be validated when sent.
     <h2>textarea Element</h2>
 	<span class="note">rows attribute</span> specifies the visible number of lines in a text area.<br>
-    <span class="note">cols attribute</span> specifies the visible width of a text area.<br><br>
+    <span class="note">cols attribute</span> specifies the visible width of a text area.<br>
+	<span class="note">readonly attribute</span>for Specifies that the element is read-only<br>
+	<span class="note">disabled attribute</span> it specifies that the element should be disabled.<br>
+	<span class="note">maxlength attribute</span> it specifies number characters inside element.<br>
+	
+	<br>
 	<form>
-		<textarea name="message" rows="10" cols="30">
-			The cat was playing in the garden.
+		<textarea name="message" rows="10" cols="30">The cat was playing in the garden.
 		</textarea>
+		<textarea name="message" rows="10" cols="30" readonly>Example of the readonly attribute.
+		</textarea>
+		<textarea name="message" rows="10" cols="30" disabled>Example of the disabled attribute.
+		</textarea><br>
+		<label>Example of the maxlength attribute. this box allow only 10 characters.</label><br>
+		<textarea name="message" rows="10" cols="30" maxlength="10">1234567890
+		</textarea>
+		
 	</form>
 	<p class="verde">
 	&lt;form&gt;<br>
 		&lt;textarea name="message" rows="10" cols="30"&gt;<br>
 			The cat was playing in the garden.<br>
 		&lt;/textarea&gt;<br>
+		&lt;textarea name="message" rows="10" cols="30" <u>readonly</u>&gt;<br>
+		Example of the readonly attribute<br>
+		&lt;/textarea&gt;<br>
+		&lt;textarea name="message" rows="10" cols="30" <u>disabled</u>&gt;<br>
+		Example of then disabled attribute.<br>
+		&lt;/textarea&gt;<br>
+		&lt;label&gt;Example of the maxlength attribute. this box allow only 10 characters.&lt;/label&gt;&lt;br&gt;<br>
+		&lt;textarea name="message" rows="10" cols="30" <u> maxlength="10"</u>&gt;<br>
+		1234567890<br>
+		&lt;/textarea&gt;<br>
+		
 	&lt;/form&gt;<br>
 	</p>
 	<h2>button Element</h2>
@@ -431,6 +492,106 @@
 	  &lt;/fieldset&gt;<br>
 	&lt;/form&gt;<br>
 	
+	</p>
+	<h2>datalist</h2>
+	
+	<p>
+	<form action="/action_page.php">
+	  <input list="browsers">
+	  <datalist id="browsers">
+		<option value="Internet Explorer">
+		<option value="Firefox">
+		<option value="Chrome">
+		<option value="Opera">
+		<option value="Safari">
+	  </datalist>
+	</form>
+	</p>
+	<p>Example code</p>
+	<p>element specifies a list of pre-defined options for an &lt;input&gt; element.(combobox)<br>
+	The <u style="color:red">list</u> attribute of the <span class="note">&lt;input&gt;</span> element, must refer to the <u style="color:red">id</u> attribute of the <span class="note">&lt;datalist&gt;</span> element.
+	</p>
+	
+	
+	<p class="verde">
+		&lt;form action="/action_page.php"&gt;<br>
+		  &lt;input list="browsers"&gt;<br>
+		  &lt;datalist id="browsers"&gt;<br>
+			&lt;option value="Internet Explorer"&gt;<br>
+			&lt;option value="Firefox"&gt;<br>
+			&lt;option value="Chrome"&gt;<br>
+			&lt;option value="Opera"&gt;<br>
+			&lt;option value="Safari"&gt;<br>
+		  &lt;/datalist&gt;<br>
+		&lt;/form&gt;	<br>
+	</p>
+	<h2>The output Element</h2>
+    <p>This element represents the result of a calculation</p>
+	<p>
+		<form 
+		  oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+		  0
+		  <input type="range"  id="a" name="a" value="50">
+		  100 +
+		  <input type="number" id="b" name="b" value="50">
+		  =
+		  <output name="x" for="a b"></output>
+		  <br><br>
+		  
+		</form>
+	</p>
+	<p>This code:</p>
+	<p class="verde">
+		&lt;form 
+		  oninput="x.value=parseInt(a.value)+parseInt(b.value)"&gt;
+		  0<br>
+		  &lt;input type="range"  id="a" name="a" value="50"&gt;
+		  100 +<br>
+		  &lt;input type="number" id="b" name="b" value="50"&gt;
+		  =<br>
+		  &lt;output name="x" for="a b"&gt;&lt;/output&gt;<br>
+		  &lt;br&gt;&lt;br&gt;
+		  <br>
+		&lt;/form&gt;<br>
+	</p>	
+	<br>
+	
+	<h2 id="action">Example of the Max and Min Attribute</h2>
+	<span class="note">min </span>specifies the maximum value of an element element<br>
+	<span class="note">max </span>specifies the minimum value of an element element<br><br>
+	
+	<p>
+	<form action="/action_page.php">
+
+	  Enter a date before 1980-01-01:
+	  <input type="date" name="bday" max="1979-12-31">
+
+	  Enter a date after 2000-01-01:
+	  <input type="date" name="bday" min="2000-01-02">
+
+	  Quantity (between 1 and 5):
+	  <input type="number" name="quantity" min="1" max="5">
+
+	  <input type="submit">
+
+	</form>
+	</p>
+	<p class="verde">
+	&lt;form action="/action_page.php"&gt;<br><br>
+
+	  Enter a date before 1980-01-01:<br>
+	  &lt;input type="date" name="bday" max="1979-12-31"&gt;<br>
+	  <br>	
+	  Enter a date after 2000-01-01:<br>
+	  &lt;input type="date" name="bday" min="2000-01-02"&gt;<br>
+      <br>
+	  Quantity (between 1 and 5):
+	  &lt;input type="number" name="quantity" min="1" max="5"&gt;
+      <br>
+	  &lt;input type="submit"&gt;
+      <br><br>
+	&lt;/form&gt;<br>
+
 	</p>
 	
 	<p>
