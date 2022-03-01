@@ -108,19 +108,19 @@
 		<tr><th>max</th><td></td><td>OK</td></tr>
 		<tr><th>min</th><td></td><td>OK</td></tr>
 		<tr><th>multiple</th><td>it specifies that the user is allowed to enter/select more than one value.</td><td>OK</td></tr>
-		<tr><th>pattern</th><td></td><td></td></tr>
-		<tr><th>placeholder</th><td></td><td></td></tr>
-		<tr><th>required</th><td></td><td></td></tr>
-		<tr><th>step</th><td></td><td></td></tr>
-		<tr><th>autofocus</th><td></td><td></td></tr>
+		<tr><th>pattern</th><td>specifies how the value of the input element is checked/validated.</td><td>OK</td></tr>
+		<tr><th>placeholder</th><td>Short hint</td><td>OK</td></tr>
+		<tr><th>required</th><td>it is mandatory to fill the element</td><td>OK</td></tr>
+		<tr><th>step</th><td>Specifies the legal number intervals for an input field</td><td>OK</td></tr>
+		<tr><th>autofocus</th><td>Focus when the page loads</td><td>OK</td></tr>
 		<tr><th>height</th><td></td><td>OK</td></tr>
 		<tr><th>width</th><td></td><td>OK</td></tr>
-		<tr><th>list</th><td></td><td></td></tr>
-		<tr><th>form</th><td>input element</td><td></td></tr>
-		<tr><th>formaction</th><td></td><td></td></tr>
-		<tr><th>formmethod </th><td></td><td></td></tr>
-		<tr><th>formtarget </th><td></td><td></td></tr>
-		<tr><th>formnovalidate </th><td></td><td></td></tr>
+		<tr><th>list</th><td>use in the Input element and refers to a datalist </td><td>OK</td></tr>
+		<tr><th>form</th><td>button, fieldset, input, label, meter, object, output, select, textarea</td><td>OK</td></tr>
+		<tr><th>form action</th><td>	Specifies where to send the form-data when a form is submitted. Only for type="submit<br>this attribute overrides the form's action attribute.</td><td>OK</td></tr>
+		<tr><th>form method </th><td>GET OU POST</td><td>OK</td></tr>
+		<tr><th>form target </th><td>specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</td><td>OK</td></tr>
+		<tr><th>form novalidate </th><td>Specifies that the form should not be validated when submitted</td><td>OK</td></tr>
 		<tr><th>rows</th><td>specifies the visible number of lines in a text area</td><td>OK</td></tr>
 		<tr><th>cols </th><td>specifies the visible width of a text area</td><td>OK</td></tr>
 		
@@ -593,7 +593,70 @@
 	&lt;/form&gt;<br>
 
 	</p>
+	<h2> pattern, placeholder, required,step, autofocus, form, formaction</h2><br>
+	<p>the pattern attribute specifies how the value of the <span class ="note">input</span> element is checked/validated.<br>
+        The pattern attribute works with the following input types: text, date, search, url, tel, email and password.
+	</p>
+	<p>placeholder specifies a short hint for value. For Input and textarea Element</p>
+	<p class="note">Example textarea</p>
+	&lt;textarea<span class="note"> placeholder="Describe yourself here..."</span>&gt;&lt;/textarea&gt;
+	<p>required just include attribute to set as required element</p>
+	<p>autofocus just include attribute to set as required element</p>
+	<p>form used in button, fieldset, input, label, meter, object, output, select, textarea
+	<p class="verde">
+	&lt;form id="form1" &gt;<br>
+		&lt;p&gt;Three letter country code&lt;/p&gt;<br>
+		&lt;p&gt;Country code: &lt;input type="text" name="country_code"<br>
+		<span class="note">pattern="[A-Za-z]{3}"</span> title="Three letter country code"&gt;<br>
+		&lt;/p&gt;<br>
+		&lt;p&gt;Six or more characters&lt;/p&gt;<br>
+		&lt;p&gt;Password: &lt;input type="password" name="pw" <span class="note">pattern=".{6,}" required</span>title="Six or more characters"&gt;<br>
+		&lt;/p&gt;<br>
+		&lt;p&gt;Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters&lt;/p&gt;<br>
+		&lt;p&gt;Password: &lt;input type="password" name="pw" <span class="note">pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"</span> title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"&gt;<br>
+		&lt;/p&gt;<br>
+		&lt;label for="phone"&gt;Enter a phone number:&lt;/label&gt;&lt;br&gt;<br>
+		 &lt;input type="tel" id="phone" name="phone" <span class="note">placeholder="123-45-678"</span> pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"&gt;&lt;br&gt;<br>
+		 &lt;small&gt;Format: 123-45-678&lt;/small&gt;&lt;br&gt;<br><br>
+		 
+		 &lt;label for="points"&gt;Example attribute step = 3&lt;/label&gt;<br>
+		 &lt;input type="number" name="points" <span class="note">step="3"</span>&gt;<br><br>
+		 
+		&lt;input type="submit"&gt;<br>
+	&lt;/form&gt;<br>
+	&lt;button type="submit" <span class="note">form="form1" formaction="/action_page2.php" </span> value="Submit"&gt;Submit to another page&lt;/button&gt;<br>
 	
+	</p>
+	<form id="form1">
+		<p>Three letter country code</p>
+		<p>Country code: <input type="text" name="country_code"
+		pattern="[A-Za-z]{3}" title="Three letter country code">
+		</p>
+		<p>Six or more characters</p>
+		<p>Password: <input type="password" name="pw" pattern=".{6,}" title="Six or more characters" required>
+		</p>
+		<p>Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters</p>
+		<p>Password: <input type="password" name="pw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters">
+		</p>
+		 <label for="phone">Enter a phone number:</label><br><br>
+		 <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+		 <small>Format: 123-45-678</small><br><br>
+		 <label for="points">Example attribute step = 3</label>
+		 <input type="number" name="points" step="3"><br><br>
+		<input type="submit">
+		  <button type="submit" ">Submit to another page</button>
+	</form>
+	<br>
+	<button type="submit" form="form1" formaction="/action_page2.php" value="Submit">Submit to another page</button>
+	<br><br>
+	<h2>target attribute</h2>
+	For &lt;a&gt; and &lt;area&gt; elements, the target attribute specifies where to open the linked document.<br><br>
+	For &lt;base&gt; elements, the target attribute specifies the default target for all hyperlinks and forms in the page.<br><br>
+	For &lt;form&gt; elements, the target attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.<br><br>
+	<p>Example of the use</p>
+	<p class="verde">
+	&lt;form action="/action_page.php" method="get" target="_blank"&gt;
+	</p>
 	<p>
 		<a href="index.html">Home</a>
 	</p>	
