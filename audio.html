@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learning audio/video HTML
+    </title>
+	<style>
+	.verde {
+		  font-size: 110%;
+		  color: green;
+		}		
+
+	</style>
+  </head>
+  <body>
+    <p>
+		<a href="index.html">Home</a>
+	</p>
+ 
+   <h3>Welcome! Here am using the audio and video tag. </h3>
+   <h2>audio</h2>
+	<p class="verde">
+	&lt;audio controls&gt;<br>
+	  &lt;source src="horse.ogg" type="audio/ogg"&gt;<br>
+	  &lt;source src="horse.mp3" type="audio/mpeg"&gt;<br>
+	  Your browser does not support the audio tag.<br>
+	&lt;/audio&gt;<br>
+	</p>
+	<br>
+	<h2>video</h2>
+	<p class="verde">
+	
+	&lt;video width="320" height="240" controls&gt;<br>
+	  &lt;source src="movie.mp4" type="video/mp4"&gt;<br>
+	  &lt;source src="movie.ogg" type="video/ogg"&gt;<br>
+	  Your browser does not support the video tag.<br>
+	&lt;/video&gt;<br>
+	</p>
+	<h2>track</h2>
+	A video with subtitle tracks for two languages:<br>
+	<p class="verde">	
+	&lt;video width="320" height="240" controls&gt;<br>
+	  &lt;source src="forrest_gump.mp4" type="video/mp4"&gt;<br>
+	  &lt;source src="forrest_gump.ogg" type="video/ogg"&gt;<br>
+	  &lt;track src="fgsubtitles_en.vtt" kind="subtitles" srclang="en" label="English"&gt;<br>
+	  &lt;track src="fgsubtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"&gt;<br>
+	&lt;/video&gt;<br>
+	</p>
+	<h2>source</h2>
+	An audio player with two source files. The browser will choose the first <source> it supports:<br>
+    <p class="verde">	
+	&lt;audio controls&gt;<br>
+	  &lt;source src="horse.ogg" type="audio/ogg"&gt;<br>
+	  &lt;source src="horse.mp3" type="audio/mpeg"&gt;<br>
+	  Your browser does not support the audio element.<br>
+	&lt;/audio&gt;<br>
+	</p>
+	<h2>autoplay</h2>
+	<p class="verde">	
+		var vid = document.getElementById("myVideo");
+		vid.autoplay = true;
+		vid.load();
+	</p>
+	<br>
+	<h2>controls</h2>
+	Specifies that audio/video controls should be displayed (such as a play/pause button etc)<br>
+	When present, it specifies that audio/video controls should be displayed.<br>
+
+	Controls should include:<br>
+    <ul>
+	<li>Play</li>
+	<li>Pause</li>
+	<li>Seeking</li>
+	<li>Volume</li>
+	<li>Fullscreen toggle (for video only)</li>
+	<li>Captions/Subtitles (for video only, when available)</li>
+	<li>Track (for video only, when available)</li>
+	</ul>
+	<br>
+	<p class="verde">		
+		&lt;audio controls&gt;	<br>
+		  &lt;source src="horse.ogg" type="audio/ogg"&gt;	<br>
+		  &lt;source src="horse.mp3" type="audio/mpeg"&gt;	<br>
+		  Your browser does not support the audio element.	<br>
+		&lt;/audio&gt;	<br>
+	</p>
+	<br>
+	<h2>default</h2>
+	
+	 it specifies that the track is to be enabled if the user's preferences do not indicate that another track would be more appropriate.<br>
+	 Use in the element track.<br><br>
+	<p class="verde">		
+		
+	&lt;video width="320" height="240" controls&gt;<br>
+	  &lt;source src="forrest_gump.mp4" type="video/mp4"&gt;<br>
+	  &lt;source src="forrest_gump.ogg" type="video/ogg"&gt;
+	  &lt;track src="subtitles_en.vtt" kind="subtitles" srclang="en" label="English" default&gt;<br>
+	  &lt;track src="subtitles_no.vtt" kind="subtitles" srclang="no" label="Norwegian"&gt;<br>
+	&lt;/video&gt;<br>
+	</p>
+	
+	<br>
+   <p>
+		<a href="index.html">Home</a>
+	</p>	
+  </body>
+</html>

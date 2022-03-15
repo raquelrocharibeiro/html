@@ -5,6 +5,15 @@
       Learning HTML
     </title>
 	<style>
+	.verde {
+		  font-size: 110%;
+		  color: green;
+		}		
+	.myDiv {
+	  border: 5px outset red;
+	  background-color: lightblue;
+	  text-align: center;
+	}
 	</style>
   </head>
   <body>
@@ -18,8 +27,180 @@
 	<p style="color:red;">p style="color:red;"</p>
 	<p style="color:blue;">p style="color:blue;"</p>
 	<p style="font-size:50px;">p style="font-size:50px;"</p>
+    <h2>&lt;div&gt;</h2>	
+	Use to Division or a section<br>
+	Use as Container<br>
+	Tag is easily styled by using the class or id attribute.<br>
+	<div class="myDiv">
+	  <h2>This is a heading in a div element</h2>
+	  <p>This is some text in a div element.</p>
+	</div>
+	<br>
+	<h2>&lt;details&gt;</h2>
+	<p>tag is often used to create an interactive widget that the user can open and close. By default, the widget is closed. When open, it expands, and displays the content within.<br>
+
+	Any sort of content can be put inside the &lt;details&gt; tag. <br>
+
+	Tip: The &lt;summary&gt; tag is used in conjuction with &lt;details&gt; to specify a visible heading for the details.<br>
+	</p>
+	<p>Example</p>
+	<details>
+	  <summary>Epcot Center</summary>
+	  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+	</details>
+	<br>
+	<h2>&lt;footer&gt;</h2>
+	
+	The &lt;footer&gt; tag defines a footer for a document or section.<br>
+	You can have several  &lt;footer&gt; elements in one document.<br>
+	A &lt;footer&gt; element typically contains:
+    <ul>
+	<li>authorship information</li>
+	<li>copyright information</li>
+	<li>contact information</li>
+	<li>sitemap</li>
+	<li>back to top links</li>
+	<li>related documents</li>
+	</ul>
+	<br>
+	<footer>
+	  <p>Author: Raquel Ribeiro</p>
+	  <p><a href="mailto:quelrocha13@gmail.com">quelrocha13@gmail.com</a></p>
+	</footer>
+	<br>
+	<h2>&lt;header&gt;</h2>
+	The &lt;header&gt; element represents a container for introductory content or a set of navigational links.<br><br>
+
+	A &lt;header&gt; element typically contains:<br>
+	one or more heading elements (&lt;h1&gt; - &lt;h6&gt;)<br>
+	logo or icon<br>
+	authorship information<br>
+	<b>Note:</b> You can have several &lt;header&gt; elements in one HTML document.<br>
+	&lt;header&gt; <b>cannot</b> be placed within a &lt;footer&gt;, &lt;address&gt; or another &lt;header&gt; element.
+	<article>
+	  <header>
+		<h1>A heading here</h1>
+		<p>Posted by John Doe</p>
+		<p>Some additional information here</p>
+	  </header>
+	  <p>Lorem Ipsum dolor set amet....</p>
+	</article>
+	<br>
+	<h2>summary</h2>
+	The &lt;summary&gt; tag defines a visible heading for the &lt;details&gt; element. <br>
+	The heading can be clicked to view/hide the details.<br>
+	The &lt;summary&gt; element should be the first child element of the &lt;details&gt; element.<br>
+	<details>
+	  <summary>Epcot Center</summary>
+	  <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+	</details>
+	<br>
+	<br>
+    <h2>section</h2>
+	 tag defines a section in a document.<br>
+	<section>
+	<h2>WWF History</h2>
+	<p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+	</section>
+
+	<section>
+	<h2>WWF's Symbol</h2>
+	<p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+	</section>
+	
+	<h2>article</h2>
+	 tag specifies independent, self-contained content.<br>
+	 Source:Forum post, Blog post, News story<br>
+	 The &lt;article&gt; element does not render as anything special in a browser. <br>
+	 However, you can use CSS to style the &lt;article&gt;element <br><br>
 
 
+	<article>
+	<h2>Google Chrome</h2>
+	<p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+	</article>
+
+	<article>
+	<h2>Mozilla Firefox</h2>
+	<p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+	</article>
+
+	<article>
+	<h2>Microsoft Edge</h2>
+	<p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+	</article>
+	
+	<h2>aside</h2>
+	tag defines some content aside from the content it is placed in.<br>
+	The aside content should be indirectly related to the surrounding content.<br>
+	The &lt;aside&gt; content is often placed as a sidebar in a document.<br>
+	you can use CSS to style the &lt;aside&gt; element <br>
+	<p>Example</p>
+	<p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+	<aside>
+	<h4>Epcot Center</h4>
+	<p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+	</aside>
+
+	<h2>main</h2>
+	The tag specifies the main content of a document.<br>
+    The content inside the &lt;main&gt; element should be unique to the document.<br>
+	It should not contain any content that is repeated across documents such as sidebars, navigation links, copyright information, site logos, and search forms.<br>
+    There must not be more than one &lt;main&gt; element in a document. <br>
+	The &lt;main&gt; element must NOT be a descendant of an &lt;article&gt;, &lt;aside&gt;, &lt;footer&gt;, &lt;header&gt;, or &lt;nav&gt; element.
+	<br><br>
+	Example:<br>
+	<p class="verde">
+	&lt;main&gt;<br>
+	&lt;h1&gt;text&lt;/h1&gt;<br>
+    &lt;p&gt;text&lt;/p&gt;<br>
+   <br>
+	   &lt;article&gt;<br>
+	   &lt;h2&gt;text&lt;/h2&gt;<br><br>
+	   &lt;p&gt;text&lt;/p&gt;<br>
+	   &lt;/article&gt;<br>
+  
+	   &lt;article&gt;<br>   
+	   &lt;h2&gt;text&lt;/h2&gt;<br><br>
+	   &lt;p&gt;text&lt;/p&gt;<br>
+	   &lt;/article&gt;<br>
+	  
+	   &lt;article&gt;<br>   
+	   &lt;h2&gt;text&lt;/h2&gt;<br><br>
+	   &lt;p&gt;text&lt;/p&gt;<br>
+	   &lt;/article&gt;<br>
+	&lt;/main&gt;
+	</p>
+
+	<h2>data</h2>
+	This element provides both a machine-readable value for data processors, and a human-readable value for rendering in a browser.<br>
+	<ul>
+	  <li><data value="21053">Cherry Tomato</data></li>
+	  <li><data value="21054">Beef Tomato</data></li>
+	  <li><data value="21055">Snack Tomato</data></li>
+	</ul>
+	<br><br>
+	<p class="verde">
+	&lt;ul&gt;<br>
+	  &lt;li&gt;&lt;data value="21053"&gt;Cherry Tomato&lt;/data&gt;&lt;/li&gt;<br>
+	  &lt;li&gt;&lt;data value="21054"&gt;Beef Tomato&lt;/data&gt;&lt;/li&gt;<br>
+	  &lt;li&gt;&lt;data value="21055"&gt;Snack Tomato&lt;/data&gt;&lt;/li&gt;<br>
+	&lt;/ul&gt;<br>
+	</p>
+	
+	<h2>time</h2>
+	How to define a time and a date:<br>
+	<p>Open from <time>10:00</time> to <time>21:00</time> every weekday.</p>
+
+	<p>I have a date on <time datetime="2008-02-14 20:00">Valentines day</time>.</p>
+	<br>
+	<p class="verde">
+	&lt;p&gt;Open from &lt;time&gt;10:00&lt;/time&gt; to &lt;time&gt;21:00&lt;/time&gt; every weekday.&lt;/p&gt;<br>
+
+	&lt;p&gt;I have a date on &lt;time datetime="2008-02-14 20:00"&gt;Valentines day&lt;/time&gt;.&lt;/p&gt;<br>
+	</p>
+	<br><br>
    <p>
 		<a href="index.html">Home</a>
 	</p>	

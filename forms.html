@@ -657,6 +657,65 @@
 	<p class="verde">
 	&lt;form action="/action_page.php" method="get" target="_blank"&gt;
 	</p>
+	<br>
+	<h2>accept-charset attribute</h2>
+	Specifies the character encodings that are to be used for the form submission<br>
+	use in form<br>
+	<p class="verde">
+		&lt;form action="/action_page.php" accept-charset="iso-8859-1"&gt;<br>
+		  first name: &lt;input type="text" name="fname"&gt;&lt;br&gt;<br>
+		  last name: &lt;input type="text" name="lname"&gt;&lt;br&gt;<br>
+		  &lt;input type="submit" value="submit"&gt;<br>
+		&lt;/form&gt;<br>
+	</p>
+	<h2>accept</h2>
+	   Specify that the server accepts only image files in the file upload.<br>
+	   Use in input.<br>   <br>
+	   <p class="verde">
+
+		&lt;form action="/action_page.php"&gt;<br>
+		  &lt;input type="file" name="pic" accept="image/*"&gt;<br>
+		  &lt;input type="submit"&gt;<br>
+		&lt;/form&gt;<br>
+		</p>
+		<br>
+	<h2>checked attribute</h2>
+		
+	it specifies that an &lt;input&gt; element should be pre-selected (checked) when the page loads.<br>
+	The checked attribute can be used with &lt;input type="checkbox" checked &gt; and &lt;input type="radio" default &gt;.<br>
+	<form action="/action_page.php">
+	  <input type="checkbox" name="vehicle" value="Bike"> I have a bike<br>
+	  <input type="checkbox" name="vehicle" value="Car" checked> I have a car<br>
+	  <input type="submit" value="Submit">
+	</form>		
+	<br>
+	<h2>tabindex</h2>
+	specifies the tab order of an element (when the "tab" button is used for navigating).<br><br>
+	<p class="verde">
+	&lt;div tabindex="1"&gt;W3Schools&lt;/div&gt;<br>
+	&lt;div tabindex="3"&gt;Google&lt;/div&gt;<br>
+	&lt;div tabindex="2"&gt;Microsoft&lt;/div&gt;<br>
+	&lt;h2 id="script"&gt;script&lt;/h2&gt;<br>
+	</p>
+	<br>
+	
+	
+	<h2 id="script">script</h2>
+	Defines a client-side script.<br><br>
+	
+	Write "Hello JavaScript!" with JavaScript:
+	<script>
+		document.getElementById("demo").innerHTML = "Hello JavaScript!";
+	</script>
+	<h2>noscript</h2>
+	tag defines an alternate content to be displayed to users that have disabled scripts in their browser or have a browser that doesn't support script.<br>
+	element can be used in both &lt;head&gt; and &lt;body&gt;. <br>
+	When used inside &lt;head&gt;, the &lt;noscript&gt; element could only contain &lt;link&gt;, &lt;style&gt;, and &lt;meta&gt; elements.<br><br>
+
+	<noscript>Your browser does not support JavaScript!</noscript>
+	<br>
+	
+	<br>
 	<p>
 		<a href="index.html">Home</a>
 	</p>	

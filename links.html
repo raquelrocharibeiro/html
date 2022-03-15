@@ -32,6 +32,17 @@
 		a:hover, a:active {
 		background-color: red;
 		}
+		
+		.vermelho {
+		  font-size: 105%;
+		  color: red;
+		}	
+		.verde {
+		  font-size: 105%;
+		  color: green;
+		}		
+		
+
 	</style>
 
   </head>
@@ -76,6 +87,53 @@
 	Absolute URL : a full web address<br>
 	Relative URLs: without the "https://www"<br>
 	</p>
+	
+	<h2>Element Link</h2>
+	The tag defines the relationship between the current document and an external resource.<br>
+	The tag is most often used to link to external style sheets or to add a favicon to your website.<br>
+	The  element is an empty element, it contains attributes only.<br>
+	Also supports the Event Attributes in HTML and Global Attributes in HTML.<br><br>
+	<span class="vermelho">hreflang</span>  attribute specifies the language of the text in the linked document.<br>
+	&lt;link hreflang="langauge_code"&gt;<br><br>
+	<span class="vermelho">media </span>attribute specifies what media/device the target resource is optimized for and can accept several values.<br><br>
+	Values:<br>
+	<ul>
+	<li>all	=>  Default. Used for all media type devices</li>
+	<li>print => Used for Print preview mode/printed pages</li>
+	<li>screen => Used for computer screens, tablets, smart-phones etc.</li>
+	<li>speech => Used for screenreaders that "reads" the page out loud</li>
+	</ul>
+	&lt;link media="value"&gt;
+	<br><br>
+	<h2>Element nav</h2>
+	The tag defines a set of navigation links.<br>
+	NOT all links of a document should be inside a &lt;nav&gt; element. <br>
+	The &lt;nav&gt; element is intended only for major block of navigation links.<br>
+	Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.<br><br>
+	<br><br>
+	<h2>Element Meta Info</h2>
+	<h2>Element base</h2>
+	
+	The &lt;base&gt; tag specifies the base URL and/or target for all relative URLs in a document and<br>
+	there can only be one single &lt;base&gt; element in a document, <br>
+	and it must be inside the &lt;head&gt; element, and tag must have either an href or a target attribute present, or both.<br><br>
+	
+	<h2>Element meta</h2>
+	The &lt;meta&gt; tag defines metadata about an HTML document. Metadata is data (information) about data.<br>
+	&lt;meta&gt; tags always go inside the &lt;head&gt; element, and are typically used to specify character set, page description, keywords, author of the document, and viewport settings.<br>
+    Metadata will not be displayed on the page, but is machine parsable.<br>
+	Metadata is used by browsers (how to display content or reload page), search engines (keywords), and other web services.<br>
+    There is a method to let web designers take control over the viewport (the user's visible area of a web page), through the &lt;meta&gt; tag (See "Setting The Viewport" example below).<br>
+	<p class="verde">
+	&lt;head&gt;<br>
+	  &lt;meta charset="UTF-8"&gt;<br>
+	  &lt;meta name="description" content="Free Web tutorials"&gt;<br>
+	  &lt;meta name="keywords" content="HTML,CSS,XML,JavaScript"&gt;<br>
+	  &lt;meta name="author" content="John Doe"&gt;<br>
+	  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+	&lt;/head&gt;<br>
+	</p>
+	<br>
 	<p>
 		<a href="index.html">Home</a>
 	</p>	

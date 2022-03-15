@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Learning HTML
+    </title>
+	<style>
+		.verde {
+		  font-size: 110%;
+		  color: green;
+		}		
+
+	</style>
+  </head>
+  <body>
+    <p>
+		<a href="index.html">Home</a>
+	</p>
+
+   <h3>Welcome! </h3>
+   <h2>accesskey</h2>
+   Global Attribute<br>
+   Specifies a shortcut key to activate/focus an element<br>
+   <p class="verde">
+
+   &lt;a href="https://www.w3schools.com/html5" accesskey="h"&gt;HTML5&lt;/a&gt;&lt;br&gt;<br>
+   &lt;a href="https://www.w3schools.com/css3" accesskey="c"&gt;CSS3&lt;/a&gt;<br>
+	</p>
+    
+	<h2>async</h2>
+  	
+	Specifies that the script is executed asynchronously (only for external scripts)<br>
+	When present, it specifies that the script will be executed asynchronously as soon as it is available.<br>
+	<p class="verde">
+		&lt;script src="demo_async.js" async&gt;&lt;/script&gt;
+	</p>
+	<br>
+	<h2>charset</h2>
+	Specifies the character encoding<br>
+	use in meta or script<br>
+	<p class="verde">
+		&lt;head&gt;<br>
+		&lt;meta charset="UTF-8"&gt;<br>
+		&lt;/head&gt;<br><br>
+		&lt;script src="myscripts.js" charset="UTF-8"&gt;&lt;/script&gt;<br>
+	</p>
+	<br>
+	<h2>content</h2>
+	Use in meta.<br>
+	Specifies the value associated with the http-equiv or name attribute<br>
+	
+	<p class="verde">
+	
+	&lt;head&gt;<br>
+	  &lt;meta charset="utf-8"&gt;<br>
+	  &lt;meta name="description" content="free web tutorials"&gt;<br>
+	  &lt;meta name="keywords" content="html, css, javascript"&gt;<br>
+	  &lt;meta name="author" content="john doe"&gt;<br>
+	  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;<br>
+	&lt;/head&gt;	<br>
+	</p>
+	<br>
+	<h2>http-equiv</h2>
+	Values: content-security-policy, content-type, default-style, refresh<br>
+	The http-equiv attribute provides an HTTP header for the information/value of the content attribute.<br>
+    can be used to simulate an HTTP response header.<br><br>
+
+	<p class="verde">	
+		&lt;head&gt;<br>
+		  &lt;meta http-equiv="refresh" content="30"&gt;<br>
+		&lt;/head&gt;<br>
+	</p>
+	<h2>contenteditable</h2>
+	attribute specifies whether the content of an element is editable or not.<br>
+	<p class="verde">	
+		&lt;element contenteditable="true|false"&gt;
+	</p>
+	<br>
+	<h2>data</h2>
+	Specifies the URL of the resource to be used by the object<br>
+	use in object element.<br>
+	<p class="verde">		
+	&lt;object width="400" height="400" data="helloworld.swf"&gt;&lt;/object&gt;<br>
+	<br> example below <br>
+	&lt;object data="images/laura.jpeg" width="300" height="200"&gt;<br>
+	</p>
+	<object data="images/laura.jpeg" width="300" height="200"></object>
+	
+	<br>
+	<h2>data-*</h2>
+	The data-* attribute consist of two parts:<br>
+	The attribute name should not contain any uppercase letters, and must be at least one character long after the prefix "data-"<br>
+	The attribute value can be any string<br>
+	Custom attributes prefixed with "data-" will be completely ignored by the user agent<br><br>
+	
+	<br>
+	<p class="verde">			
+	&lt;!DOCTYPE html&gt;<br>
+	&lt;html&gt;<br>
+	&lt;head&gt;<br>
+	&lt;script&gt;<br>
+	function showDetails(animal) {<br>
+	  var animalType = animal.getAttribute("data-animal-type");<br>
+	  alert("The " + animal.innerHTML + " is a " + animalType + ".");<br>
+	}<br>
+	&lt;/script&gt;<br>
+	&lt;/head&gt;<br>
+	&lt;body&gt;<br><br>
+
+	&lt;h1&gt;Species&lt;/h1&gt;<br>
+	&lt;p&gt;Click on a species to see what type it is:&lt;/p&gt;<br><br>
+
+	&lt;ul&gt;<br>
+	  &lt;li onclick="showDetails(this)" id="owl" data-animal-type="bird"&gt;Owl&lt;/li&gt;<br>
+	  &lt;li onclick="showDetails(this)" id="salmon" data-animal-type="fish"&gt;Salmon&lt;/li&gt;  <br>
+	  &lt;li onclick="showDetails(this)" id="tarantula" data-animal-type="spider"&gt;Tarantula&lt;/li&gt;  <br>
+	&lt;/ul&gt;<br><br>
+
+	&lt;/body&gt;<br>
+	&lt;/html&gt;<br><br>
+	</p>
+	<br>
+	<h2>datatime</h2>
+	specifies the date and time when the text was deleted/inserted.<br>
+	The time element does not render as anything special in any of the major browsers.<br><br>
+	The datetime attribute can be used on the following elements:del, ins, time<br>
+	
+	<p class="verde">&lt;ins datetime="2015-09-15T22:55:03Z"&gt;This is an inserted text.&lt;/ins&gt;</p><br>
+	<ins datetime="2015-09-15T22:55:03Z">This is an inserted text.</ins><br>
+
+	<h2>translate</h2>
+	specifies whether the content of an element should be translated or not.<br>
+	It is Global Attributes.<br>
+	
+	<p translate="no">Don't translate this!</p>
+	<p>This can be translated to any language.</p>	
+	
+	<p>
+		<a href="index.html">Home</a>
+	</p>	
+  </body>
+</html>
